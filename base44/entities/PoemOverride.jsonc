@@ -1,0 +1,42 @@
+{
+  "name": "PoemOverride",
+  "type": "object",
+  "properties": {
+    "volume": {
+      "type": "number",
+      "title": "Volume",
+      "description": "Numero del volume (1-74)"
+    },
+    "poem": {
+      "type": "string",
+      "title": "Poesia",
+      "description": "Testo della poesia sovrascritto rispetto al default"
+    },
+    "image": {
+      "type": "string",
+      "title": "Immagine",
+      "description": "URL della copertina del volume"
+    }
+  },
+  "required": [
+    "volume"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

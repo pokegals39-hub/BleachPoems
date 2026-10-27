@@ -1,0 +1,33 @@
+{
+  "name": "Feedback",
+  "type": "object",
+  "properties": {
+    "rating": {
+      "type": "number",
+      "title": "Valutazione",
+      "description": "Da 0.5 a 5 (fiamme); 0 se non indicata"
+    },
+    "comment": {
+      "type": "string",
+      "title": "Commento",
+      "description": "Testo della recensione (obbligatorio)"
+    }
+  },
+  "required": [
+    "comment"
+  ],
+  "rls": {
+    "read": {},
+    "create": {},
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
